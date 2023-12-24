@@ -7,7 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entites", "Entites\Entites.csproj", "{1294E448-26BF-4FB9-806C-F22ABDF2B525}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestUI", "TestUI\TestUI.csproj", "{E786F4A3-EAEF-4C11-A7D3-CB7ACCF22AC0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestUI For Dapper", "TestUI\TestUI For Dapper.csproj", "{E786F4A3-EAEF-4C11-A7D3-CB7ACCF22AC0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestUI For EntityFramework", "TestUI For EntityFramework\TestUI For EntityFramework.csproj", "{D03EC61A-D55B-4E81-839B-46F266BAC853}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{E786F4A3-EAEF-4C11-A7D3-CB7ACCF22AC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E786F4A3-EAEF-4C11-A7D3-CB7ACCF22AC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E786F4A3-EAEF-4C11-A7D3-CB7ACCF22AC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D03EC61A-D55B-4E81-839B-46F266BAC853}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D03EC61A-D55B-4E81-839B-46F266BAC853}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D03EC61A-D55B-4E81-839B-46F266BAC853}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D03EC61A-D55B-4E81-839B-46F266BAC853}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

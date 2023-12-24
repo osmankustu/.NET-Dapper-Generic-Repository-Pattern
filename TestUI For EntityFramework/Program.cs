@@ -1,24 +1,19 @@
-﻿
-
-using Autofac.Extensions.DependencyInjection;
-using Entites.Concrete;
-using Microsoft.Graph;
-using Microsoft.Graph.Models;
-using System;
-using System.Collections.Generic;
+﻿using Entites.Concrete;
 using System.Diagnostics;
+using System.Diagnostics.Eventing.Reader;
 using TestUI.Concrete;
 
 ProductRepository productRepository = new ProductRepository();
-Stopwatch Stopwatch = new Stopwatch();
+Stopwatch stopwatch = new Stopwatch();
 Random random = new Random();
+
 string islem = "0";
 int milliseconds = 2000;
 
 Console.WriteLine("GetAll İşlemi Başlıyor");
 for (int i = 0; i < 5; i++)
 {
-    Console.WriteLine($"{i} işlem Başlıyor..");
+    Console.WriteLine($"{i}. işlem ");
     for (int j = 0; j < 10; j++)
     {
         getAll();
@@ -31,7 +26,7 @@ for (int i = 0; i < 5; i++)
     Console.WriteLine($"{i}. işlem ");
     for (int j = 0; j < 10; j++)
     {
-        int x = random.Next(1, 590);
+        int x = random.Next(1,590);
         getById(x);
     }
     Thread.Sleep(milliseconds);
@@ -41,16 +36,17 @@ for (int i = 0; i < 5; i++)
 
 
 
+
 //add(newProduct);
 //update(newProduct);
 //delete(newProduct);
 void getById(int id)
 {
-    Stopwatch.Start();
-    productRepository.Get(id);
-    Stopwatch.Stop();
-    Console.WriteLine($"Perormance : {Stopwatch.Elapsed.TotalSeconds}");
-    Stopwatch.Reset();
+    stopwatch.Start();
+    productRepository.Get(id,p=>p.Id == id);
+    stopwatch.Stop();
+    Console.WriteLine($"Perormance : {stopwatch.Elapsed.TotalSeconds}");
+    stopwatch.Reset();
 }
 
 void update(Products p)
@@ -72,11 +68,11 @@ void delete(Products p)
 
 void getAll()
 {
-    Stopwatch.Start();
+    stopwatch.Start();
     List<Products> list = productRepository.getAll();
-    Stopwatch.Stop();
-    Console.WriteLine($"Perormance : {Stopwatch.Elapsed.TotalSeconds}");
-    Stopwatch.Reset();
+    stopwatch.Stop();
+    Console.WriteLine($"Perormance : {stopwatch.Elapsed.TotalSeconds}");
+    stopwatch.Reset();
 }
 
 void add(Products p)
@@ -85,5 +81,6 @@ void add(Products p)
     Console.WriteLine("Added");
     getAll();
 }
+
 
 Console.ReadKey();

@@ -1,4 +1,5 @@
-﻿using Core.Entity;
+﻿
+using Core.Entity;
 using Core.GenericDataAccessRepository.Abstract;
 using Dapper;
 using System;
@@ -15,7 +16,7 @@ using static Dapper.SqlMapper;
 
 namespace Core.GenericDataAccessRepository.Concrete.DapperFramework
 {
-    public class DapperEntityRepository<TEntity> : DapperEntityAttrConf<TEntity>, IEntitiyRepository<TEntity>
+    public class DapperEntityRepositoryBase<TEntity> : DapperEntityAttrConf<TEntity>, IEntitiyRepository<TEntity>
         where TEntity : class, IEntity, new()
         
     {

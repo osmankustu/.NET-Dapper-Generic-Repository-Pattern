@@ -1,4 +1,5 @@
-﻿using Core.GenericDataAccessRepository.Concrete.DapperFramework;
+﻿
+using Core.GenericDataAccessRepository.Concrete.EntityFramework;
 using Entites.Concrete;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ using TestUI.Abstract;
 
 namespace TestUI.Concrete
 {
-    public class ProductRepository : DapperEntityRepositoryBase<Products>,IProductService
+    public class ProductRepository : EfEntityRepositoryBase<Products,EfContext>,IProductService
     {
     }
 }
