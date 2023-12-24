@@ -1,7 +1,7 @@
 
 # .NET Dapper and Ef Generic Repository 
 
-Hello friends, in this project you can see how the generic warehouse is created. If you want, you can use it in your projects, just star it :). Thanks
+Hello friends, in this project you can see how the generic repository is created. If you want, you can use it in your projects, just star it :). Thanks
 
 
 ## Appendix
