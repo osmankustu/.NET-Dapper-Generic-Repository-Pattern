@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Core.GenericDataAccessRepository.Concrete.EntityFramework
+namespace DataAccess.Concrete.EntityFramework
 {
     public class EfContext : DbContext
     {
@@ -16,6 +16,6 @@ namespace Core.GenericDataAccessRepository.Concrete.EntityFramework
             optionsBuilder.UseSqlServer("Server=DESKTOP-N6K9MD1;Database=dapperGeneric;Trusted_Connection=true;TrustServerCertificate=True");
         }
 
-       public DbSet<Products> Products { get; set; }
+        public DbSet<Products> Products { get; set; }
     }
 }
