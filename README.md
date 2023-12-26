@@ -11,7 +11,7 @@ I did some tests. According to my results, Dapper is much more fluid and faster 
 
 ## Documentation
 
-copy the repository and run it in Visual Studio.
+copy the repository and run Web API it in Visual Studio.
 The database consists of 1 table, the table name is products >>contains >> you just need to create id,name,quantity,price
 
 ## SQL Command
@@ -25,7 +25,7 @@ CREATE TABLE Products(
 
 ## Tech Stack
 
-**Client:** Console App
+**Client:** ASP.NET CORE API
 
-**Server:** .NET
+**Server:** ISS EXPRESS
 
